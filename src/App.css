@@ -1,0 +1,135 @@
+.App {
+  font-family: sans-serif;
+  text-align: center; 
+}
+
+/* NAVBAR */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  padding: 0 2rem;
+  height: 7vh;
+}
+
+.Navbar h3 {
+  color: #918eba;
+}
+
+/* HEADER */
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #282c34; */
+  height: 10vh;
+}
+.Header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #736ead;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* MAIN */
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+}
+
+/* MAIN header*/
+.Main .header h4 {
+  text-align: center;
+  margin-top: 1rem;
+  padding: .1rem;
+  border-bottom: 3px solid #918eba;
+  font-size: 2rem;
+}
+
+/* MAIN form*/
+.Main form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Main form label {
+  margin-top: 1rem;
+  height: 2rem;
+}
+
+.Main .form input {
+  margin-bottom: 1rem;
+  height: 2rem;
+}
+
+.Main form button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #08712b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Main form button:hover {
+  background-color: #133298;
+}
+
+/* MAIN section*/
+.Main p {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 40%;
+  padding: 1rem;
+  text-align: center;
+  border-top: 5px solid #918eba;
+  font-size: 1.75rem;
+}
+
+/* message */
+.success {
+  background-color: #c4960b;
+  color:#fff
+}
+
+.error {
+  background-color: #981398;
+  color: #e0d8d8;
+}
+
+.error-0 {
+  background-color: #133298;
+  color: #e0d8d8;
+}
+
+/* FOOTER */
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #282c34;
+  height: 15vh;
+}
+
+.Footer p {
+  font-size: 1rem;
+  padding: 0;
+  margin: 10px;
+  font-weight: bold;
+  color: #918eba;
+}
+
