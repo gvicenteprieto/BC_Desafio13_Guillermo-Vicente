@@ -6,6 +6,8 @@ const Users = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
 
+  const [show, setShow] = useState(false);
+
   const handleName = (e) => {
     setName(e.target.value);
     return name;
@@ -16,10 +18,13 @@ const Users = () => {
     return name;
   };
 
-  const resetForm = () => {
-    setName("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    setShow(false);
     setAge("");
-  }
+    setName("");
+  };
 
   let usersList = [];
 
@@ -40,10 +45,9 @@ const Users = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.target.reset();
-    resetForm();
+  const handleMsg = () => {
+    welcomeMessage(name, age);
+    setShow(!show);
   };
 
   return (
@@ -51,13 +55,30 @@ const Users = () => {
       <header className="header">
         <h3>Formulario de Verificación</h3>
       </header>
-      <Form handleAge={handleAge} handleName={handleName} handleSubmit={handleSubmit}/>
+      <Form
+        handleAge={handleAge}
+        handleName={handleName}
+        handleSubmit={handleSubmit}
+        name={name}
+        age={age}
+      />
 
-      { name && age > 18 
-        ? 
-        (<p className="success">{welcomeMessage(name, age)}</p>) 
-        : 
-        (<p className="error">{welcomeMessage(name, age)}</p>)
+      {
+        !show && name && age && (
+          <section className="verify">
+            <button className="btn" onClick={handleMsg}>
+              VERIFICAR
+            </button>
+          </section>
+        )
+      }
+
+      {show &&
+        (name && age > 18 ? (
+          <p className="success">{welcomeMessage(name, age)}</p>
+        ) : (
+          <p className="error">{welcomeMessage(name, age)}</p>
+        ))
       }
 
       {usersList.map((user) => (

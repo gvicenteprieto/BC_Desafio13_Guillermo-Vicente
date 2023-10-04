@@ -79,15 +79,55 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
-  background-color: #08712b;
+  background-color: #3b59ba;
   color: #fff;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .Main .form button:hover {
-  background-color: #133298;
+  background-color: #5573d6;
+  color: #fff;
+}
+
+.Main .form .button {
+  margin-top: .5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #918eba;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: text;
+}
+
+.Main .verify {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.Main .verify .btn {
+  margin-top: .5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #dea20b;
+  color: #3b3683;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.Main .verify .btn:hover {
+  background-color: #08712b;
+  color: #fff;
 }
 
 /* MAIN section*/
